@@ -47,7 +47,7 @@ export const OFFICIAL_MENTORS = [
     },
     {
         id: "660000000000000000000002", // Corrected to 24 chars
-        clerkId: "clerk-sarah",
+        clerkId: "user_3BhqL2X7eovxSBxGsgASQ1BhAMb",
         email: "sudhanshu1404@gmail.com",
         name: "Sudhanshu Chaudhary",
         role: "UI/UX Engineer",
