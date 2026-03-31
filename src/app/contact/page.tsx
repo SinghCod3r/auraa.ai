@@ -43,16 +43,16 @@ export default function ContactPage() {
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-2">Email Us</h3>
                             <p className="text-slate-600 mb-4">Our friendly team is here to help.</p>
-                            <a href="mailto:hello@aura.ai" className="text-indigo-600 font-semibold hover:underline">hello@aura.ai</a>
+                            <a href="mailto:hello@aura.ai" className="text-indigo-600 font-semibold hover:underline">aura.ai.org@gmail.com</a>
                         </div>
 
                         <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
                             <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 mb-6">
                                 <MessageSquare className="h-6 w-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">Live Chat</h3>
+                            {/* <h3 className="text-xl font-bold text-slate-900 mb-2">Live Chat</h3>
                             <p className="text-slate-600 mb-4">Chat with our support team.</p>
-                            <button className="text-indigo-600 font-semibold hover:underline">Start a chat</button>
+                            <button className="text-indigo-600 font-semibold hover:underline">Start a chat</button> */}
                         </div>
                     </div>
 
