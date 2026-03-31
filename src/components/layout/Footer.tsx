@@ -39,16 +39,16 @@ export default function Footer() {
                     <div>
                         <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-slate-900">Connect</h3>
                         <ul className="space-y-3 text-sm font-medium text-slate-500">
-                            <li><a href="#" className="hover:text-indigo-600 transition-colors block w-fit">Twitter</a></li>
-                            <li><a href="#" className="hover:text-indigo-600 transition-colors block w-fit">LinkedIn</a></li>
-                            <li><a href="#" className="hover:text-indigo-600 transition-colors block w-fit">Discord Community</a></li>
+                            <li><a href="https://x.com/AuraAITech" className="hover:text-indigo-600 transition-colors block w-fit">Twitter</a></li>
+                            <li><a href="https://www.linkedin.com/company/auraaitech/" className="hover:text-indigo-600 transition-colors block w-fit">LinkedIn</a></li>
+                            <li><a href="https://discord.gg/zHcZJEDkZ" className="hover:text-indigo-600 transition-colors block w-fit">Discord Community</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="mt-16 border-t border-slate-200/60 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium text-slate-400">
                     <p>© {new Date().getFullYear()} Aura.Ai Platform. All rights reserved.</p>
                     <div className="flex gap-4">
-                        <span className="text-slate-300">Made with AI</span>
+                        <span className="text-slate-300">Made by Aura.Ai Team</span>
                     </div>
                 </div>
             </div>

@@ -2,20 +2,20 @@ import React from 'react';
 import { Search, Filter, Star, MapPin, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import connectToDatabase from '@/lib/mongoose';
-import { User, MentorProfile, DUMMY_MENTORS } from '@/models';
+import { User, MentorProfile, OFFICIAL_MENTORS } from '@/models';
 import MentorCard from './MentorCard';
 
 export default async function MentorsPage() {
     await connectToDatabase();
 
-    // Fetch only approved mentor profiles and their associated User docs
+    // Fetch approved mentor profiles and their associated User docs
     const mentorProfiles = await MentorProfile.find({ isApproved: true }).populate({
-        path: 'userId', // Changed from user to userId based on the schema
+        path: 'userId',
         model: User
     }).lean();
 
     // Map DB data to match the UI shape
-    let mentors = mentorProfiles.map((p: any) => {
+    const mentors = mentorProfiles.map((p: any) => {
         const user = p.userId;
         return {
             id: p._id.toString(),
@@ -23,23 +23,14 @@ export default async function MentorsPage() {
             name: user?.name || "Unknown Mentor",
             role: p.designation || "AI Mentor",
             company: p.company || "Independent",
-            location: "Remote", // Defaulting to remote for now
+            location: p.location || "Remote",
             rating: p.averageRating || 5.0,
             reviews: p.totalReviews || 0,
             skills: p.expertise || [],
-            image: "bg-indigo-600",
+            image: user?.image || p.image || "bg-indigo-600",
             hourlyRate: p.hourlyRate || 50
         };
     });
-
-    // Use dummy mentors if none are found in the DB
-    if (mentors.length === 0) {
-        mentors = DUMMY_MENTORS.map(m => ({
-            ...m,
-            userId: m.id, // For dummy data, use same ID
-            skills: m.expertise // Explicitly map expertise to skills
-        }));
-    }
 
     return (
         <div className="min-h-screen bg-slate-50 py-12 lg:py-20">

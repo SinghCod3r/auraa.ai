@@ -51,8 +51,19 @@ export default function MentorCard({ mentor }: { mentor: Mentor }) {
 
             {/* Profile Header */}
             <div className="flex items-start gap-4 mb-6">
-                <div className={`w-16 h-16 rounded-full flex-shrink-0 ${mentor.image} flex items-center justify-center text-white text-2xl font-bold shadow-inner`}>
-                    {mentor.name.charAt(0)}
+                <div className={`w-16 h-16 rounded-full flex-shrink-0 overflow-hidden flex items-center justify-center text-white text-2xl font-bold shadow-inner ${!mentor.image?.startsWith("http") ? mentor.image : "bg-slate-200"}`}>
+                    {mentor.image?.startsWith("http") ? (
+                        <img 
+                            src={mentor.image} 
+                            alt="" 
+                            className="w-full h-full object-cover" 
+                            onError={(e) => {
+                                (e.target as any).src = "https://www.gravatar.com/avatar/000?d=mp&f=y";
+                            }}
+                        />
+                    ) : (
+                        mentor.name.charAt(0)
+                    )}
                 </div>
                 <div className="flex-1">
                     <h3 className="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">

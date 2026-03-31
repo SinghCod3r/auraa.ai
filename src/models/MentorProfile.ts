@@ -29,44 +29,50 @@ const MentorProfileSchema = new mongoose.Schema<IMentorProfile>(
 export const MentorProfile: Model<IMentorProfile> =
     mongoose.models.MentorProfile || mongoose.model<IMentorProfile>("MentorProfile", MentorProfileSchema);
 
-export const DUMMY_MENTORS = [
+export const OFFICIAL_MENTORS = [
     {
-        id: "dummy-1",
-        name: "Dr. Aris",
-        role: "Senior AI Researcher",
-        company: "Google DeepMind",
-        location: "London, UK",
+        id: "660000000000000000000001", // Corrected to 24 chars
+        clerkId: "user_3BhgiJrhc9No8EjfNtjqcUlyuV5",
+        email: "ayushsinghceee@gmail.com",
+        name: "Er. Ayush Singh",
+        role: "Technical Consultant",
+        company: "Ex Chetu, Ex TSC, Curently Working at Acxiom Consulting",
+        location: "UP, India",
         rating: 4.9,
         reviews: 124,
-        expertise: ["Machine Learning", "Neural Networks", "Python"],
-        image: "bg-blue-600",
+        expertise: ["Node.js", "MongoDB", "React.js", "React Native", "MERN Stack", "Data Structure & Algorithm"],
+        image: "https://i.ibb.co/mrNSdRn5/Whats-App-Image-2026-03-30-at-12-37-41-PM.jpg",
         hourlyRate: 150,
-        bio: "Specializing in large language models and reinforcement learning."
+        bio: "Specializing in Micro-Services and Three Layer Architecture. Mentored 300+ Students and Helped them to choose right path according to the trend."
     },
     {
-        id: "dummy-2",
-        name: "Sarah Chen",
-        role: "Product Design Lead",
+        id: "660000000000000000000002", // Corrected to 24 chars
+        clerkId: "clerk-sarah",
+        email: "sudhanshu1404@gmail.com",
+        name: "Sudhanshu Chaudhary",
+        role: "UI/UX Engineer",
         company: "Airbnb",
-        location: "San Francisco, CA",
+        location: "Surat, India",
         rating: 4.8,
         reviews: 89,
         expertise: ["UX Design", "Figma", "Product Strategy"],
-        image: "bg-rose-500",
+        image: "https://i.ibb.co/tT2jwpY7/Whats-App-Image-2026-03-31-at-2-29-07-PM.jpg",
         hourlyRate: 120,
         bio: "Helping mentees build world-class digital products through design thinking."
     },
     {
-        id: "dummy-3",
-        name: "Marcus Thorne",
-        role: "Staff Software Engineer",
-        company: "Netflix",
-        location: "Los Angeles, CA",
+        id: "660000000000000000000003", // Corrected to 24 chars
+        clerkId: "clerk-marcus",
+        email: "razaaun647@gmail.com",
+        name: "Aun Raza Khan",
+        role: "BDE Lead",
+        company: "Ex-Cogent, Ex-Tech Mahindra, ",
+        location: "Noida, India",
         rating: 5.0,
         reviews: 215,
-        expertise: ["Distributed Systems", "Java", "Cloud Architecture"],
+        expertise: ["Inspection", "Communication Skill", "Executive"],
         image: "bg-emerald-600",
         hourlyRate: 200,
-        bio: "Scaling systems to millions of users. Expert in high-performance computing."
+        bio: "Helpling student to know the Reality of Non-Tech Field and Help them to Grow in the Sales Industry."
     }
 ];
